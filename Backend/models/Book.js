@@ -6,7 +6,7 @@ const bookSchema = new mongoose.Schema({
     description:{type:String},
     price:{type:Number,required:true},
     seller:{type:mongoose.Schema.Types.ObjectId, ref:"User", required:true},
-    status:{type:String, enum:["availabel", "sold","donated"], default:"available"},
+    status:{type:String, enum:["available", "sold","donated"], default:"available"},
 })
 
 const Book = mongoose.model("Book", bookSchema);
